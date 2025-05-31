@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import WeatherApp from "./components/WeatherApp";
 import LikedCities from "./components/LikedCities";
+import './styles/main.scss';
 
 export default function App() {
   const [likedCities, setLikedCities] = useState(() => {

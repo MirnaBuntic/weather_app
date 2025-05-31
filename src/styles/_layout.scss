@@ -1,0 +1,24 @@
+.layout-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer"
+    ;
+    grid-template-columns: 1fr;
+}
+
+.main {
+    grid-area: main;
+}
+
+@media (min-width: 768px) {
+    .layout-container {
+        grid-template-columns: 1fr minmax(0, 800px) 1fr;
+        grid-template-areas:
+            "header header header"
+            ". main ."
+            "footer footer footer"
+        ;
+    }
+}

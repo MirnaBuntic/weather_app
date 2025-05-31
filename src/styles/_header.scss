@@ -1,0 +1,26 @@
+.header {
+    grid-area: header;
+    background-color: #4194cb;
+   
+    nav {
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+    }
+    
+    a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
