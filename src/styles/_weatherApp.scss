@@ -49,6 +49,8 @@
 
 @media (min-width: 768px) {
     .form-section{
+        border-radius: 0;
+
         form {
             flex-direction: row;
             margin-left: 3rem;

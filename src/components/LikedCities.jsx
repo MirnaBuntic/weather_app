@@ -26,11 +26,11 @@ export default function LikedCities({ cities, onRemove, onSelect }) {
         if (cities.length > 0) fetchAllCities();
     }, [cities]);
 
-    if (cities.length === 0) return <p>No liked cities yet.</p>;
+    if (cities.length === 0) return <p className="no-liked-cities">No liked cities yet.</p>;
 
     return (
         <section>
-            <h2>Liked cities</h2>
+            <h2 className="liked">Liked cities</h2>
 
             <ul>
                 {cities.map((city) => (
