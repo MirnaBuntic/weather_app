@@ -9,7 +9,7 @@ export default function Header() {
                         <Link to="/">MyWeatherApp</Link>
                     </li>
                     <li>
-                        <Link to="/liked">Liked</Link>
+                        <Link to="/liked"><i className="fas fa-heart"></i></Link>
                     </li>
                 </ul>
             </nav>

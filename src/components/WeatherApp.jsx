@@ -1,7 +1,7 @@
 import { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 
-export default function WeatherApp({ onLike }) {
+export default function WeatherApp({ onLike, likedCities }) {
     const [city, setCity] = useState("");
     const [weather, setWeather] = useState("");
     const [error, setError] = useState("");
@@ -23,12 +23,16 @@ export default function WeatherApp({ onLike }) {
             setError(null);
         } catch (error) {
             setWeather(null);
-            setError("Something went wrong");
+            setError("City not found");
         }
     };
 
+    const isLiked = weather
+    ? likedCities.some(c => c.toLowerCase() === weather.name.toLowerCase())
+    : false;
+
     return (
-        <section>
+        <section className="form-section">
             <h2>Check the weather in your city!</h2>
 
             <form
@@ -37,7 +41,6 @@ export default function WeatherApp({ onLike }) {
                     fetchWeather();
                 }}
             >
-                <label htmlFor="city-input">City</label>
                 <input
                     id="city-input"
                     type="text"
@@ -54,9 +57,10 @@ export default function WeatherApp({ onLike }) {
 
             {weather && (
                 <article>
+                    <h3>{weather.name}</h3>
                     <WeatherInfo weatherData={weather} />
-                    <button onClick={() => onLike(weather.name)}>Like this city</button>
-                </article>
+                    <button onClick={() => onLike(weather.name)}><i className={isLiked ? "fas fa-heart" : "far fa-heart"}></i></button>
+                </article> 
             )}
         </section>
     );

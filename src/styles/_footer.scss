@@ -1,3 +1,20 @@
 .footer {
     grid-area: footer;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    background-color: rgba(198, 198, 198, 0.763);
+    height: 100vh;
+
+    a {
+        font-size: x-small;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        a {
+            font-size: medium;
+        }
+    }
 }

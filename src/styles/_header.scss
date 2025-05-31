@@ -1,6 +1,8 @@
 .header {
     grid-area: header;
-    background-color: #4194cb;
+    background-image: url('../img/image.png');
+    background-size: cover;
+    padding: 0.75rem;
    
     nav {
         margin-left: 2rem;
@@ -13,14 +15,20 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 0;
+        margin-top: 1.5rem;
     }
     
     a {
+        background-color: rgba(3, 60, 101, 0.5);
         color: white;
         text-decoration: none;
+        font-weight: bold;
+        padding: 1rem;
+        border-radius: 10%;
 
         &:hover {
-            text-decoration: underline;
+            color: rgb(84, 130, 194);
+            background-color: white;
         }
     }
 }
@@ -28,8 +36,13 @@
 @media (min-width: 768px) {
     .header {
         nav {
-        margin-left: 7rem;
-        margin-right: 7rem;
+            margin-left: 7rem;
+            margin-right: 7rem;
+        }
+
+        a {
+            font-size: xx-large;
+            background-color: transparent;
         }
     }
 }

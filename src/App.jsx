@@ -4,6 +4,7 @@ import Layout from "./components/Layout";
 import WeatherApp from "./components/WeatherApp";
 import LikedCities from "./components/LikedCities";
 import './styles/main.scss';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function App() {
   const [likedCities, setLikedCities] = useState(() => {
@@ -15,8 +16,10 @@ export default function App() {
     localStorage.setItem("likedCities", JSON.stringify(likedCities));
   }, [likedCities]);
 
-  const addCity = (city) => {
-    if (!likedCities.includes(city)) {
+  const toggleCity = (city) => {
+    if (likedCities.some(c => c.toLowerCase() === city.toLowerCase())) {
+      setLikedCities(likedCities.filter(c => c.toLowerCase() !== city.toLowerCase()));
+    } else {
       setLikedCities([...likedCities, city]);
     }
   };
@@ -28,7 +31,7 @@ export default function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<WeatherApp onLike={addCity}/>} />
+        <Route path="/" element={<WeatherApp onLike={toggleCity} likedCities={likedCities}/>} />
         <Route path="/liked" element={<LikedCities cities={likedCities} onRemove={removeCity} onSelect={(city) => {}} />} />
       </Routes>
     </Layout>
