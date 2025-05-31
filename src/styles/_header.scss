@@ -3,8 +3,8 @@
     background-color: #4194cb;
    
     nav {
-        margin-left: 7rem;
-        margin-right: 7rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     ul {
@@ -21,6 +21,15 @@
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        nav {
+        margin-left: 7rem;
+        margin-right: 7rem;
         }
     }
 }
