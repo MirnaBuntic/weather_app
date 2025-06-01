@@ -9,6 +9,11 @@
     a {
         font-size: x-small;
     }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
 }
 
 @media (min-width: 768px) {
