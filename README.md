@@ -1,12 +1,24 @@
-# React + Vite
+# VaerApp-prosjekt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dette er et projekt jeg har jobbet med selv. Det er en enkel vaer app hvor man kan søke etter vaeret i en valgri by. Jeg har hentet API:et fra OpenWeatherMap og brukt react for å strukturere appen bra med komponenter. Jeg har også tenkt på gjenbruk av komponenter og sendt de videre som props. LocalStorage er brukt for å kunne lagre byer oppe i likes seksjonen.
 
-Currently, two official plugins are available:
+## Struktur av projektet:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Her har jeg satt opp ulike komponenter for å strukturere scripten, deretter router jeg alle paths i app.jsx og sender props mellom komponentene for å gjenbruke dem sån at det blir mindre kode og mer strukturert.
 
-## Expanding the ESLint configuration
+## Teknologier:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- HTML
+- SCSS
+- JavaScript
+- React
+- React router
+- Node
+- Vite
+- localStorage
+
+## Refleksjon:
+
+Dette er en simpel vaerapp, hvor fokus var å lage lettlest og strukturet kode. Målet her er i hovedsak å vise mine kunnskaper innen API håndtering og smart bruk av prop og komponenter.
+
+
