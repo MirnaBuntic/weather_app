@@ -52,7 +52,7 @@ export default function WeatherApp({ onLike, likedCities }) {
             </form>
 
             {error && (
-                <p>{error}</p>
+                <p className="error">{error}</p>
             )}
 
             {weather && (

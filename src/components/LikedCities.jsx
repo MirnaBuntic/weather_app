@@ -29,13 +29,13 @@ export default function LikedCities({ cities, onRemove, onSelect }) {
     if (cities.length === 0) return <p className="no-liked-cities">No liked cities yet.</p>;
 
     return (
-        <section>
+        <section className="liked-section">
             <h2 className="liked">Liked cities</h2>
 
             <ul>
                 {cities.map((city) => (
                     <li key={city}>
-                        <button onClick={() => onSelect(city)}>{city}</button>
+                        <h3 className="title" onClick={() => onSelect(city)}>{city}</h3>
                         <WeatherInfo weatherData={weatherData[city]} />
                         <button onClick={() => onRemove(city)}>Remove</button>
                     </li>

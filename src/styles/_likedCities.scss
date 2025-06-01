@@ -1,16 +1,66 @@
 .no-liked-cities {
-    display: flex;
-    justify-content: center;
-    color: black;
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+.liked-section {
+    .liked {
+        display: flex;
+        justify-content: center;
+        color: #034e7a;
+        font-size: 1.8rem;
+        margin-top: 3rem;
+    }
+
+    ul {
+
+        padding: 0;
+
+        li {
+            background-color: white;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-top: 2.5rem;
+            border-radius: 10%;
+            list-style: none;
+        }
+
+        h3 {
+            font-size: x-large;
+            color: #034e7a;;
+            margin-left: 2rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-left: 2rem;
+        }
+
+        img {
+            margin-left: 2rem;
+        }
+
+        button {
+            margin-left: 7rem;
+        }
+    }
+
+
 }
 
-.liked {
-    display: flex;
-    justify-content: center;
-    color: #034e7a;
-    font-size: 1.8rem;
-}
 
 @media (min-width: 768px) {
+    .liked-section {
+        ul {
+            li {
+                border-radius: 0;
 
+                button {
+                    margin-left: 29rem;
+                }
+            }
+        }
+    }
 }
